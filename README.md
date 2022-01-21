@@ -1,2 +1,2 @@
 # boiler-plate-ko
-node.js 공부용 프로젝트
+node.js / react.js 공부용 프로젝트
