@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LandingPage from './components/views/LandingPage/LandingPage'
 import LoginPage from './components/views/LoginPage/LoginPage'
 import RegisterPage from './components/views/RegisterPage/RegisterPage'
+import Auth from './hoc.auth'
+import { auth } from './_actions/user_action';
 
 function App() {
   return (
@@ -17,9 +19,9 @@ function App() {
           of them to render at a time
         */}
          <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/" element={auth(<LandingPage />, null)} />
+          <Route path="/login" element={auth(<LoginPage />, false)} />
+          <Route path="/register" element={auth(<RegisterPage />, false)} />
         </Routes>
       </div>
     </Router>
