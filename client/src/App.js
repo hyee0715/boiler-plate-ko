@@ -19,9 +19,9 @@ function App() {
           of them to render at a time
         */}
          <Routes>
-          <Route path="/" element={auth(<LandingPage />, null)} />
-          <Route path="/login" element={auth(<LoginPage />, false)} />
-          <Route path="/register" element={auth(<RegisterPage />, false)} />
+          <Route path="/" element={auth(LandingPage, null)} />
+          <Route path="/login" element={auth(LoginPage, false)} />
+          <Route path="/register" element={auth(RegisterPage, false)} />
         </Routes>
       </div>
     </Router>
